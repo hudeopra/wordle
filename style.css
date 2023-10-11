@@ -8,11 +8,17 @@ html,
 body {
   background: var(--default);
   color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-top: 30px;
 }
 #game {
   display: grid;
   place-items: center;
-  height: 600px;
+  height: auto;
   width: 100%;
 }
 .grid {
@@ -22,22 +28,21 @@ body {
 }
 
 .box {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border: 3px solid var(--empty);
   margin: 4px;
   color: #fff;
   text-transform: uppercase;
   display: grid;
   place-items: center;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 2.4rem;
 }
 .box.empty {
   background: var(--empty);
   border: 0;
-  height: 66px;
-  width: 66px;
+  height: 56px;
+  width: 56px;
 }
 .box.wrong {
   background: var(--wrong);
@@ -51,7 +56,10 @@ body {
   height: 66px;
   width: 66px;
 }
-
+footer {
+  position: absolute;
+  bottom: 0;
+}
 .animated {
   animation: flip 0.5s ease;
 }
