@@ -59,6 +59,8 @@ h1 {
 footer {
   position: absolute;
   bottom: 0;
+    left: 0;
+    right: 0;
 }
 .animated {
   animation: flip 0.5s ease;
