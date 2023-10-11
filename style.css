@@ -1,0 +1,68 @@
+:root {
+  --default: #12121c;
+  --empty: #3a3a3c;
+  --wrong: #b59f3b;
+  --right: #53844e;
+}
+html,
+body {
+  background: var(--default);
+  color: #fff;
+}
+#game {
+  display: grid;
+  place-items: center;
+  height: 600px;
+  width: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+}
+
+.box {
+  height: 60px;
+  width: 60px;
+  border: 3px solid var(--empty);
+  margin: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+.box.empty {
+  background: var(--empty);
+  border: 0;
+  height: 66px;
+  width: 66px;
+}
+.box.wrong {
+  background: var(--wrong);
+  border: 0;
+  height: 66px;
+  width: 66px;
+}
+.box.right {
+  background: var(--right);
+  border: 0;
+  height: 66px;
+  width: 66px;
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
